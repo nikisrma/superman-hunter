@@ -111,16 +111,21 @@ function handleFavoritesButtonClick(event) {
         removeFromFavorites(heroId);
         button.textContent = 'Add to Favorites';
     } else {
-        const heroData = findheroDataById(heroId);
-        addToFavorites(heroData);
-        button.textContent = 'Remove from Favorites';
+         findheroDataById(heroId).then((data)=>{
+            addToFavorites(data);
+            button.textContent = 'Remove from Favorites';
+        });
     }
 }
 
-// Function to find hero data by ID
-// converting to string because heroId is string 
-function findheroDataById(heroId) {
-    const heroData = heroes.find((hero) => String(hero.id) === heroId);
+// function to fetch hero data
+
+  async function findheroDataById(heroId) {
+    const response = await fetch(
+      `https://gateway.marvel.com/v1/public/characters/${heroId}?ts=1&apikey=${publicKey}&hash=${hash}`
+    );
+    const data = await response.json();
+    const heroData = data.data.results[0];
     return heroData;
 }
 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Superman Hunter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-inverse nav-border">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Super Man Hunter</a>
+                    <a class="navbar-brand navbar-brand-centered" href="index.html">
+                        <img src="./images/logo2.webp" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html?showFavorites=true">Favorites</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- hero detail -->
+        <section id="heroBio">
+            <div class="hero-container" id="heroContainer"></div>
+        </section>
+
+        <!-- comic section -->
+        <section id="comic">
+            <h1 class="section-heading mb-4">
+                <span class="comic-heading"> comics </span>
+            </h1>
+
+            <div id="comic-container">
+            </div>
+        </section>
+        <!-- story section -->
+        <section id="story">
+            <h1 class="section-heading mb-4">
+                <span class="comic-heading"> stories </span>
+            </h1>
+
+            <div id="story-container">
+
+            </div>
+        </section>
+
+
+        <script src="./js/detail.js"></script>
+    </main>
+</body>
+
+</html>

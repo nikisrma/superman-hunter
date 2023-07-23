@@ -49,7 +49,7 @@ function showSearchResults(data) {
         searchResultsDiv.appendChild(searchResultsTitle);
 
         data.forEach((heroes) => {
-            const hero = createCard(heroes);
+            const hero = createHero(heroes);
             searchResultsDiv.appendChild(hero);
         });
     } else {
